@@ -81,7 +81,7 @@
 
 
     <script>
-        const hasVoted = sessionStorage.getItem('hasVoted');
+        const hasVoted = localStorage.getItem('hasVoted');
         
         if (hasVoted) {
             hideVoteButtons();
@@ -101,7 +101,7 @@
                 console.log('data:', data);  // Add this for debugging
                 if (data.vote_count !== undefined) {
                     document.getElementById(`votes-${option === 'Option A' ? 'A' : 'B'}`).innerText = data.vote_count;
-                    sessionStorage.setItem('hasVoted', true);
+                    localStorage.setItem('hasVoted', true);
                     hideVoteButtons();
                     showThankYou();
                 } else {
