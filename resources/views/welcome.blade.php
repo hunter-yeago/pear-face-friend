@@ -39,10 +39,6 @@
         .voting-section {
             flex-direction: column;
         }
-
-        img {
-            max-width: 70%;
-        }
     } 
 </style>
 <body>
