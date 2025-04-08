@@ -22,12 +22,8 @@ class VoteController extends Controller
     public function vote($option)
     {
 
-        Log::info('Vote received for: ' . $option);  // Log the option received
-
         // Find the vote record for the selected option
         $vote = Vote::where('option_name', $option)->first();
-
-        Log::info('$vote is: ' . $vote);  // Log the option received
         
         if ($vote) {
             Log::info('firing inside if');  // Log the option received

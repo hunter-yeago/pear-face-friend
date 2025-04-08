@@ -47,7 +47,7 @@
 </style>
 <body>
         
-    <h1>Does my friends face look somewhat pear shaped? test</h1>
+    <h1>Does my friends face look somewhat pear shaped?</h1>
     <section class="voting-section" aria-label="">
         
         <div class="image-div">
@@ -98,7 +98,6 @@
             })
             .then(res => res.json())
             .then(data => {
-                console.log('data:', data);  // Add this for debugging
                 if (data.vote_count !== undefined) {
                     document.getElementById(`votes-${option === 'Option A' ? 'A' : 'B'}`).innerText = data.vote_count;
                     localStorage.setItem('hasVoted', true);
